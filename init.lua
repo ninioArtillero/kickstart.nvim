@@ -190,11 +190,14 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
+    'folke/tokyonight.nvim',
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure we load this before all the other start plugins
+    opts = {
+      style = "night",
+    },
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'tokyonight'
     end,
   },
 
@@ -205,7 +208,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'tokyonight',
         component_separators = '|',
         section_separators = '',
       },
