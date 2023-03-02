@@ -195,9 +195,10 @@ require('lazy').setup({
     priority = 1000, -- make sure we load this before all the other start plugins
     opts = {
       style = "night",
+      transparent = true,
     },
     config = function()
-      vim.cmd.colorscheme 'tokyonight'
+      vim.cmd.colorscheme 'tokyonight-night'
     end,
   },
 
