@@ -273,6 +273,9 @@ require('lazy').setup({
   -- { import = 'custom.plugins' },
 }, {})
 
+-- Configuración para SCNvim
+require('custom.plugins.config.scnvim')
+
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!

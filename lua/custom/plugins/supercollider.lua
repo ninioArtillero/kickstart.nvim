@@ -1,0 +1,5 @@
+-- SuperCollider
+--
+return {
+  'davidgranstrom/scnvim',
+}
