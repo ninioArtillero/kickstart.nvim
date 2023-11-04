@@ -9,10 +9,15 @@
 -- cd ~/.local/share/nvim/lazy/vim-tidal && make install
 -- and similarly to uninstall
 -- cd ~/.local/share/nvim/lazy/vim-tidal && make uninstall
+-- Documentation:
+-- cat ~/.local/share/nvim/lazy/vim-tidal/README.md
 return {
   'tidalcycles/vim-tidal',
   config = function ()
+    vim.cmd([[ let g:tidal_target = "terminal" ]])
+    vim.cmd([[ let g:tidal_sc_boot_fallback = "$HOME/Proyectos/Tidal/superdirt_startup.scd" ]])
     vim.cmd([[ let g:tidal_sc_enable = 1 ]])
-    vim.cmd([[ let g:tidal_sc_boot_fallback = "/home/xavigo/Proyectos/Tidal/superdirt_startup.scd" ]])
+    vim.cmd([[ let g:tidal_flash_duration = "200" ]])
+    vim.cmd([[ let g:tidal_paste_file = "/tmp/tidal_paste_file.txt" ]])
   end
 }
